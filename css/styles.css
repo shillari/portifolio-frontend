@@ -115,7 +115,8 @@ section {
 
 .main-about h1,
 .main-about p,
-.main-about a {
+.main-about a,
+.downloadcv {
   display: flex;
   justify-content: center;
   align-items: center;
