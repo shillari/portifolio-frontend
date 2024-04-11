@@ -91,7 +91,7 @@ section {
 }
 
 .presentation-text {
- padding: 50px;
+  padding: 50px;
 }
 
 .profile__portrait {
@@ -107,7 +107,6 @@ section {
 .main-about {
   width: 100%;
   padding: 60px;
-  
   max-width: 800px;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -127,14 +126,12 @@ section {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  
   margin-bottom: 10px;
 }
 
 .bar {
   margin-bottom: 10px;
   width: 100%;
-  
 }
 
 .skill-name {
@@ -161,7 +158,6 @@ section {
 .main-contact {
   width: 100%;
   padding: 50px;
-  
   max-width: 750px;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -207,7 +203,6 @@ textarea {
 @supports (display: grid) {
   .grid {
     display: grid;
-    
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     margin: 30px;
@@ -222,6 +217,7 @@ textarea {
     min-height: auto;
     margin: 0;
   }
+
   .grid__item:last-child {
     grid-column: 3 / 3;
     grid-row: 1 / 3;
@@ -292,7 +288,7 @@ td {
 /* footer */
 .page-footer {
   position: relative;
-  margin-top: auto; 
+  margin-top: auto;
   clear: both;
   display: flex;
   flex-direction: column;
@@ -300,14 +296,13 @@ td {
   bottom: 10px;
 }
 
-/* start 
-   SVG animations. 
+/* start
+   SVG animations.
 */
 .cloud1,
 .cloud2 {
   animation-name: color-change, movementcloudright;
   animation-duration: 2s;
-
   animation-timing-function: linear;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -317,7 +312,6 @@ td {
 .cloud2shadow {
   animation-name: movementcloudright;
   animation-duration: 2s;
-  
   animation-timing-function: linear;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -327,7 +321,6 @@ td {
 .cloud4 {
   animation-name: color-change, movementcloudleft;
   animation-duration: 2s;
-  
   animation-timing-function: linear;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -337,7 +330,6 @@ td {
 .cloud4shadow {
   animation-name: movementcloudleft;
   animation-duration: 2s;
-  
   animation-timing-function: linear;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -346,9 +338,7 @@ td {
 .building1lights {
   animation-name: buildinglights;
   animation-duration: 2s;
-  
   animation-timing-function: linear;
-  
   animation-iteration-count: infinite;
 }
 
@@ -361,20 +351,22 @@ td {
   animation-iteration-count: infinite;
 }
 
-/* end 
-   SVG animations. 
+/* end
+   SVG animations.
 */
 
-/* 
+/*
   ANIMATION properties
 */
 @keyframes color-change {
   0% {
     fill: var(--anim-cloudstart);
   }
+
   50% {
     fill: var(--anim-cloudmiddle);
   }
+
   100% {
     fill: var(--anim-cloudend);
   }
@@ -387,7 +379,6 @@ td {
 }
 
 @keyframes movementcloudleft {
-
   100% {
     transform: translateX(-50%);
   }
@@ -401,7 +392,7 @@ td {
 
 @keyframes treerotation {
   100% {
-    transform: translateY(7%)
+    transform: translateY(7%);
   }
 }
 
@@ -409,39 +400,46 @@ td {
   from {
     width: 0;
   }
+
   to {
     width: calc(var(--level) * 1%); /* Dynamic width based on skill level */
   }
 }
 
-/* 
+/*
   MEDIA QUERIES
-  Include media queries at the bottom of the CSS file.  
+  Include media queries at the bottom of the CSS file.
 */
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
+
   .main-contact {
     display: block;
   }
+
   .contact-form {
     margin: auto;
   }
