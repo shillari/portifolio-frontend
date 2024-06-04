@@ -41,8 +41,20 @@ textarea {
   border-radius: 5px;
 }
 
-.page-header,
 .page-header__collapse {
+  display: none;
+  min-height: 96px;
+}
+
+.page-header__collapse nav {
+  display: flex;
+  width: 100%;
+  background-color: var(--bg-body);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.page-header {
   display: flex;
   width: 100%;
   padding: 20px;
@@ -60,8 +72,14 @@ textarea {
   text-align: right;
 }
 
+.page-header nav {
+  align-items: center !important;
+}
+
 .navigation-list {
   list-style-type: none;
+  align-items: center !important;
+  margin-top: 15px;
 }
 
 .navigation-list li {
@@ -91,7 +109,7 @@ section {
 }
 
 .presentation-text {
-  padding: 50px;
+  padding: 80px;
 }
 
 .profile__portrait {
@@ -193,6 +211,10 @@ textarea {
 
 .work-section h1 {
   margin: 30px;
+}
+
+.work-section h3 {
+  padding: 30px;
 }
 
 /* Alternative to browsers that don't support grid. */
@@ -424,6 +446,14 @@ td {
 }
 
 @media all and (max-width: 750px) {
+  .page-header__collapse {
+    display: flex;
+  }
+
+  .page-header {
+    display: none;
+  }
+
   .grid {
     grid-gap: 10px;
   }
